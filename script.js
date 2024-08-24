@@ -3,7 +3,7 @@ let list=document.getElementById("bands")
 bands.sort((a, b) => {
   let bandA = a.replace(/(^a|the|an)/i, '').trim();
   let bandB = b.replace(/(^a|the|an)/i, '').trim();
-  return bandA.localeCompare(bandB);
+  return bandA < bandB ? -1 : 1;
 });
 bands.forEach(band => {
   let li = document.createElement("li");
