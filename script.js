@@ -5,6 +5,7 @@ bands.sort((a, b) => {
   let bandB = b.replace(/(^a | the | an)/i, '').trim();
   return bandA < bandB ? -1 : 1;
 });
+console.log(bands)
 bands.forEach(band => {
   let li = document.createElement("li");
   li.innerText = band;
